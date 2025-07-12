@@ -2,7 +2,6 @@ import { withSentryConfig } from "@sentry/nextjs";
 
 const nextConfig = {
   productionBrowserSourceMaps: false, // يمنع توليد sourcemaps للمتصفح
-  experimental: { instrumentationHook: true },
 };
 
 // Make sure adding Sentry options is the last code to run before exporting
