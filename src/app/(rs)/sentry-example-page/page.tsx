@@ -1,6 +1,6 @@
 "use client";
+export const dynamic = "force-dynamic";
 import { useCallback } from "react";
-
 export default function Page() {
   const triggerError = useCallback(() => {
     throw new Error("sentry Test Frontend Error");
