@@ -1,4 +1,9 @@
 "use client";
+
+import { useEffect } from "react";
+
 export default function Page() {
-  throw new Error("sentry Test Frontend Error");
+  useEffect(() => {
+    throw new Error("sentry Test Frontend Error");
+  }, []);
 }
