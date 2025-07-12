@@ -1,11 +1,11 @@
 // middleware.ts
 
 import { withAuth } from "@kinde-oss/kinde-auth-nextjs/middleware";
-import { NextRequest } from "next/server";
+// import { NextRequest } from "next/server";
 
 export default withAuth(
   // هذه الدالة يمكن أن تظل فارغة إذا لم تكن بحاجة لمنطق مخصص داخل الوسيط
-  async function middleware(request: NextRequest) {
+  async function middleware() {
     // يمكنك إضافة أي منطق تريده هنا
   },
   {
