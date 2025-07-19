@@ -1,9 +1,11 @@
+"use client";
 import { HomeIcon, File, UserRound, LogOut } from "lucide-react";
 import Link from "next/link";
 import NavButton from "@/components/NavButton";
 import { ModeToggle } from "./ModeToggle";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { Button } from "./ui/button";
+import NavButtonMenu from "./NavButtonMenu";
 
 export function Header() {
   return (
@@ -23,7 +25,14 @@ export function Header() {
         </div>
         <div className="flex items-center">
           <NavButton href="/tickets" label="Ticket" icon={File} />
-          <NavButton href="/customers" label="Customers" icon={UserRound} />
+          <NavButtonMenu
+            icon={UserRound}
+            label="Customer Menu"
+            choices={[
+              { title: "Search Customers", href: "/customers" },
+              { title: "New Customer", href: "/customers/form" },
+            ]}
+          />
           <ModeToggle />
           <Button
             asChild
